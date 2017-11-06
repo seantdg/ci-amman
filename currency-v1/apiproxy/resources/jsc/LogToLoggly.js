@@ -4,12 +4,13 @@ var logglyBasePath = context.getVariable('proxy.basepath');
 var logglyUrl = logglyUrlScheme + '://' + logglyUrlDomain + logglyBasePath + '/logs';
 context.setVariable('debug.logglyUrl', logglyUrl);
 
+var x =
+
 var log = {
 	org: context.getVariable('organization.name'),
 	env: context.getVariable('environment.name'),
 	api: context.getVariable('apiproxy.name'),
-	request: {
-		resource: context.getVariable('proxy.pathsuffix'),
+	request: { resource: context.getVariable('proxy.pathsuffix'),
 		query: context.getVariable('flow.apigee.originalRequest.querystring'),
 		verb: context.getVariable('flow.apigee.originalRequest.verb')
 	},
